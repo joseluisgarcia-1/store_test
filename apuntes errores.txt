@@ -1,3 +1,5 @@
+primer error.
+
 cuando me estaba saliendo el error de -> ModuleNotFoundError: No module named 'apps', lo que me pasaba era que en las url del proyecto, estaba invocando las url desde
 apps pero no estaba diciendole en donde estaba apps, es decir, que carpeta contenía a apps y por eso no encontraba el modulo, el error porque las estaba colocando así:
 path('',include('apps.home.urls')),
@@ -5,3 +7,16 @@ path('',include('apps.home.urls')),
 y la solución fue con esto
 path('',include('catalogo.apps.home.urls')),
 
+segundo error.
+
+cuando me estaba saliendo este error: TemplateDoesNotExist y este error: return render(request, 'contacto.html', {'ctx': ctx}) 
+lo que pasaba era que en mi settings.py del proyecto en la variable TEMPLATES el dirs se lo estaba pasando mal, se lo estaba pasando así: 
+'DIRS': [os.path.join(BASE_DIR, 'templates')], y por eso no cogía, cuando se lo pasé así: 
+
+'DIRS': [os.path.join(BASE_DIR, 'catalogo/templates/home')],
+ya con ese cogió, el error era que no le estaba pasando la ruta completa de donde mi crud podía encontrar los templates
+
+tercer error
+
+el render_to_response que se lo importaba así: from django.shortcuts import render está desactualizado y lo cambiaron por render que se lo importa así:
+from django.shortcuts import render

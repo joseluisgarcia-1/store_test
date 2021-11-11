@@ -55,7 +55,7 @@ ROOT_URLCONF = 'catalogo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'catalogo/templates/home')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
