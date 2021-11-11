@@ -1,0 +1,7 @@
+cuando me estaba saliendo el error de -> ModuleNotFoundError: No module named 'apps', lo que me pasaba era que en las url del proyecto, estaba invocando las url desde
+apps pero no estaba diciendole en donde estaba apps, es decir, que carpeta contenía a apps y por eso no encontraba el modulo, el error porque las estaba colocando así:
+path('',include('apps.home.urls')),
+
+y la solución fue con esto
+path('',include('catalogo.apps.home.urls')),
+
