@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %} Titulo Base {% endblock %}
+        </title>
+    </head>
+<body>
+    <header>
+        <img src="/media/images/nike.jpg" alt="nike">
+        <h1>Proyecto - Catalogo de Productos</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Contacto</a>
+            <a href="#">Acerca de ...</a>
+        </nav>
+    </header>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+</body>
+</html>

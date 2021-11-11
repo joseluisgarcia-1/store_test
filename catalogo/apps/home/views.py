@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from catalogo.apps.home.forms import ContactForm
+from django.core.mail import EmailMultiAlternatives
 # Create your views here.
 def about_index(request):
     return HttpResponse("Index about")
